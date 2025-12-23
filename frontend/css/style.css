@@ -1,0 +1,179 @@
+
+:root{
+  --bg:#0b1220;
+  --card:#0f172a;
+  --muted:#94a3b8;
+  --primary:#1d9bf0;
+  --accent:#6c5ce7;
+  --success:#22c55e;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(29,155,240,.15), transparent 40%),
+    radial-gradient(1200px 600px at 90% -10%, rgba(108,92,231,.18), transparent 40%),
+    var(--bg);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.app{
+  width:min(980px, 94vw);
+  min-height:520px;
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,.45);
+  animation: pop .7s ease;
+}
+@keyframes pop{from{transform:scale(.98);opacity:.6}to{transform:scale(1);opacity:1}}
+.hero{
+  padding:40px;
+  background:
+    linear-gradient(180deg, rgba(29,155,240,.12), rgba(108,92,231,.12)),
+    url('') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.hero img{height:40px}
+.hero h1{margin:20px 0 6px;font-size:34px;letter-spacing:.3px}
+.hero p{color:var(--muted);max-width:420px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{
+  padding:8px 12px;border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  font-size:12px;color:#e5e7eb
+}
+.panel{
+  padding:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  width:100%;
+  max-width:380px;
+  background:rgba(2,6,23,.6);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:26px;
+  backdrop-filter: blur(10px);
+}
+.card h2{margin:6px 0 2px}
+.brandline{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px
+}
+.brandline span{color:var(--muted);font-size:13px}
+.field{margin:12px 0}
+input{
+  width:100%;
+  padding:12px 14px;
+  border-radius:12px;
+  background:#020617;
+  color:white;
+  border:1px solid rgba(255,255,255,.12);
+  outline:none;
+}
+input:focus{border-color:var(--primary)}
+.btn{
+  width:100%;
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:0;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s transform,.2s filter;
+}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.link{margin-top:10px;text-align:center;color:var(--muted)}
+.link a{color:#e5e7eb;text-decoration:none;border-bottom:1px dashed rgba(255,255,255,.3)}
+.otp{
+  display:flex;gap:10px;justify-content:center
+}
+.otp input{text-align:center;font-size:20px}
+.success{
+  color:var(--success);text-align:center;margin-top:8px
+}
+.dashboard{
+  display:grid;grid-template-columns: 1fr 1fr;gap:16px;margin-top:10px
+}
+.tile{
+  padding:16px;border-radius:14px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12)
+}
+.footer{
+  position:fixed;bottom:14px;color:var(--muted);font-size:12px
+}
+@media(max-width:900px){
+  .app{grid-template-columns:1fr}
+  .hero{display:none}
+}
+
+.otp-timer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+#progress-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #1d9bf0, #6c5ce7);
+  transition: width 1s linear;
+}
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.toggle-eye:hover {
+  opacity: 1;
+}
+
+#timer-text {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+#password-msg {
+  color: #ef4444;
+}
+#password-msg.valid {
+  color: #22c55e;
+}

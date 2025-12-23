@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+<div class="app">
+  <div class="hero">
+    <h1>Welcome To <b>SafeWave</b> !</h1>
+    <p>A next-generation login experience with intelligent security and smooth performance.</p>
+    <div class="badges">
+      <div class="badge">Email OTP</div><div class="badge">SQLite</div><div class="badge">Node.js</div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="card">
+      <div class="brandline"><img src="assets/logo.png" height="50"><span><b>SafeWave</b> For Cyber Security Solutions</span></div>
+      <h2>Create account</h2>
+      <div class="field"><input id="name" placeholder="Full name"></div>
+      <div class="field"><input id="email" placeholder="Email"></div>
+      <div class="password-box">
+       <input
+         id="password"
+         type="password"
+         placeholder="Password"
+         onkeyup="checkPassword()"
+         />
+         <span class="toggle-eye" onclick="togglePassword()">👁</span> </div>
+      <p id="password-msg" style="font-size:13px; margin-top:6px;"></p>
+      <button class="btn" onclick="register()">Register</button>
+      <div class="link">Already have an account? <a href="login.html">Login</a></div>
+    </div>
+  </div>
+</div>
+<div class="footer"><b>SafeWave</b> Solutions • Under the Supervision of <b>Dr. Sondos</b></div>
+<script src="js/auth.js"></script>
+</body></html>
